@@ -1,6 +1,7 @@
 package com.example.dependencyinjectionstart.example1
 
-@dagger.Component
+import dagger.Component
+@Component(modules = [ComputerModule::class])
 interface NewComponent {
 
     //  fun getKeyboard(): Keyboard
