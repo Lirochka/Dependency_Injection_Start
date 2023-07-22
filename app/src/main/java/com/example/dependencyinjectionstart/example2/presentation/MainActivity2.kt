@@ -1,12 +1,10 @@
 package com.example.dependencyinjectionstart.example2.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.dependencyinjectionstart.R
 import com.example.dependencyinjectionstart.example2.di.App
-import com.example.dependencyinjectionstart.example2.di.DaggerApplicationComponent
 import javax.inject.Inject
 
 class MainActivity2 : AppCompatActivity() {
@@ -25,6 +23,8 @@ class MainActivity2 : AppCompatActivity() {
 
     private val component by lazy {
         (application as App).component
+            .activityComponentFactory()
+            .create("MY_ID_2")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
