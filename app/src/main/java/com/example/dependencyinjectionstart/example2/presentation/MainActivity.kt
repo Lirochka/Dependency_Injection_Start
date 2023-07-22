@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     private val component by lazy {
         (application as App).component
             .activityComponentFactory()
-            .create("MY_ID_1")
+            .create("MY_ID_1", "NAME_1")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
