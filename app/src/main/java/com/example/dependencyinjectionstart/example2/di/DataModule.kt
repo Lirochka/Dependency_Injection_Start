@@ -14,5 +14,5 @@ interface DataModule {
     fun bindLocalBase(implLocalBase: ExampleLocalDataSourceImpl): ExampleLocalDataSource
 
     @Binds
-    fun bindRemoteData(RemoteData: ExampleRemoteDataSourceImpl): ExampleRemoteDataSource
+    fun bindRemoteData(remoteData: ExampleRemoteDataSourceImpl): ExampleRemoteDataSource
 }
